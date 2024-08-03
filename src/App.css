@@ -1,0 +1,132 @@
+:root {
+  --dark-blue: hsl(204, 19%, 11%) /*Dark Mode Elements*/;
+  --very-dark-blue: hsl(210, 15%, 5%) /*Dark Mode Background*/;
+  --very-dark-blue-text: hsl(200, 15%, 8%) /*Light Mode Text*/;
+  --dark-gray: hsl(0, 0%, 52%) /*Light Mode Input*/;
+  --very-light-gray: hsl(0, 0%, 98%) /*Light Mode Background*/;
+  --white: hsl(0, 0%, 100%) /*Dark Mode Text & Light Mode Elements*/;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-blue-text);
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+.inner-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-app h1 {
+  position: fixed;
+  top: 130px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 0.5rem 1px var(--dark-blue);
+  z-index: 2;
+}
+
+.countries-container {
+  margin-top: 400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.countrie-box {
+  transition: 0.5s;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  animation: fadeIn 1s;
+  position: relative;
+  z-index: 1;
+}
+
+.countrie-box:hover {
+  box-shadow: 1px 1px 0.5rem 1px var(--dark-blue);
+}
+
+.flag-img {
+  width: 100%;
+}
+
+.countrie-name {
+  max-width: 200px;
+  font-size: 1.5rem;
+}
+
+.medals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nation-rank {
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  border-radius: 0.5rem;
+  background-color: #d7c379;
+  padding: 0.3rem;
+  box-shadow: 1px 1px 0.2rem 1px var(--dark-blue)
+}
+
+.dark-box {
+  background-color: var(--dark-blue);
+}
+
+#scroll-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.1s;
+  padding: 0.5rem 0.25rem;
+  background-color: var(--white);
+  box-shadow: 1px 1px 0.5rem 1px var(--dark-blue);
+  z-index: 2;
+}
+
+#scroll-btn:hover {
+  transform: scale(1.1);
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .countries-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .countries-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
