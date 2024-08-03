@@ -22,8 +22,6 @@ const Header = ({ darkMode, handleMode }) => {
     setWindowY(window.scrollY)
   })
 
-  console.log(windowY)
-
   return (
     <div className="header-container" style={darkMode ? { backgroundColor: "var(--dark-blue)", boxShadow: "1px 1px 0.5rem 1px var(--dark-gray)"} : {}}>
       <div className="image-box">

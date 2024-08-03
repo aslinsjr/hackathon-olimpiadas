@@ -13,9 +13,17 @@ function App() {
   const [filterArray, setFilterArray] = useState([])
   const [delay, setDelay] = useState(false)
 
+  console.log(newData)
+
   setTimeout(() => {
     setDelay(true)
   }, 2000)
+
+  if(!newData) {
+    setTimeout(() => {
+      setDelay(true)
+    }, 3000)
+  }
 
   async function getData() {
     try {
@@ -57,10 +65,12 @@ function App() {
   }
 
   function handleFilter(e) {
-    const region = e.target.value.toLowerCase().replace(/(?:^|\s)(?!da|de|do)\S/g, l => l.toUpperCase())
+    const region = e.target.value
+
+    console.log(region)
 
     const filterRegionArray = data.filter((nation) => {
-      return nation.region.includes(region)
+      return nation.continent.includes(region)
     })
 
     setFilterArray(filterRegionArray)
