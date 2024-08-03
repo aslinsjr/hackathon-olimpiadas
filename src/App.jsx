@@ -7,8 +7,6 @@ import './App.css'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
-  const [showingNation, setShowingNations] = useState(false)
-  const [nationClicked, setNationClicked] = useState({})
   const [search, setSearch] = useState("")
   const [data, setData] = useState([])
   const [newData, setNewData] = useState([])
@@ -17,7 +15,7 @@ function App() {
 
   setTimeout(() => {
     setDelay(true)
-  }, 1500)
+  }, 2000)
 
   async function getData() {
     try {
