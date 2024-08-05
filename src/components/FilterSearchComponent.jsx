@@ -16,6 +16,7 @@ const FilterSearchComponent = ({handleSearch, handleFilter, darkMode, handleClea
         <option value="EUR">Europe</option>
         <option value="OCE">Oceania</option>
       </select>
+      <button><i className="bi bi-search"></i></button>
     </div>
   )
 }

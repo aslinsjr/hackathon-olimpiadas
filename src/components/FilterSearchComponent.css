@@ -56,6 +56,10 @@ select {
     color: var(--white);
 }
 
+.filter-container button {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
     .input-controll {
         width: 50%;
