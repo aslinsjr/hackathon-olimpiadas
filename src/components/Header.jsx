@@ -29,7 +29,7 @@ const Header = ({ darkMode, handleMode, handleMobile, mobileSearch }) => {
       </div>
       <div className="light-and-dark" style={logoSize == 400 ? {opacity:'0.5'} : {}}>
         <i className={darkMode ? "bi bi-moon-fill" : "bi bi-moon"} onClick={(e) => handleMode(e)}></i>
-        <h2 style={logoSize == 400 ? {display:'none'} : {}}><span style={darkMode ? {color:"var(--dark-gray)", fontWeight: "bolder"} : {}}>Dark</span> / <span style={!darkMode ? {color:"var(--dark-gray)", fontWeight: "bolder"} : {}}>Light</span></h2>
+        <h2 style={logoSize == 400 ? {display:'none'} : {}}><span style={darkMode ? {color:"var(--dark-gray)", fontWeight: "bolder"} : {}}>Dark</span> / <span style={!darkMode ? {color:"var(--dark-gray)", fontWeight: "lighter"} : {}}>Light</span></h2>
       </div>
       <div className="mobile-search" style={logoSize == 400 ? {opacity:'0.5'} : {}}>
       <i className={mobileSearch ? "bi bi-x" : "bi bi-search"} onClick={() => handleMobile()}></i>
