@@ -60,7 +60,32 @@ select {
     display: none;
 }
 
+@keyframes dropDown {
+    from {
+        top: -200px;
+    }
+
+    to {
+        top: 200px;
+    }
+}
+
+@keyframes dropUp {
+    from {
+        top: 200px;
+    }
+
+    to {
+        top: -200px;
+    }
+}
+
 @media screen and (max-width: 600px) {
+
+    .filter-container {
+        top: -200px;
+    }
+
     .input-controll {
         width: 50%;
     }

@@ -1,8 +1,8 @@
 import './FilterSearchComponent.css'
 
-const FilterSearchComponent = ({handleSearch, handleFilter, darkMode, handleClean}) => {
+const FilterSearchComponent = ({handleSearch, handleFilter, darkMode, handleClean, mobileSearch}) => {
   return (
-    <div className='filter-container' >
+    <div className='filter-container' style={mobileSearch ? { animation: 'dropDown 1s', top: '200px'} : {animation: 'dropUp 1s', top: '-200px'}}>
       <div className={darkMode ? "input-controll dark-input" : "input-controll"} style={darkMode ? {boxShadow: "1px 1px 0.3rem 1px var(--white)"} : {}}>
         <i className="bi bi-search"></i>
         <input className={darkMode ? "search-input dark-input" : "search-input"} onChange={(e) => handleSearch(e)} type="text" />

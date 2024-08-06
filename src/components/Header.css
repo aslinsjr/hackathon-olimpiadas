@@ -27,6 +27,7 @@
     position: absolute;
     right: 5vw;
     top: 5vh;
+    transition: 1s;
 }
 
 .light-and-dark i {
@@ -38,6 +39,9 @@
     font-size: 0.8rem;
 }
 
+.mobile-search {
+    display: none;
+}
 
 @media screen and (max-width: 600px) {
     .header-container {
@@ -46,5 +50,24 @@
 
     .light-and-dark {
         font-size: 0.5rem;
+    }
+
+    .mobile-search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: absolute;
+        left: 5vw;
+        top: 5vh;
+        transition: 0.5s;
+    }
+
+    .mobile-search h2 {
+        font-size: 0.8rem;
+    }
+
+    .mobile-search i {
+        font-size: 1.5rem;
     }
 }

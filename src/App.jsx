@@ -12,6 +12,7 @@ function App() {
   const [data, setData] = useState([])
   const [newData, setNewData] = useState([])
   const [filterArray, setFilterArray] = useState([])
+  const [mobileSearch, setMobileSearch] = useState(false)
 
   async function getData() { // Função de Resgate de Dados de API
     try {
@@ -66,6 +67,15 @@ function App() {
     setFilterArray(filterRegionArray)
   }
 
+  function handleMobile() { // Função Menu de Busca Mobile
+
+    if(mobileSearch) {
+      setMobileSearch(false)
+    } else {
+      setMobileSearch(true)
+    }
+  }
+
   useEffect(() => { // Controle de Requisição
     getData()
   }, [])
@@ -103,10 +113,10 @@ function App() {
 
   return (
     <div className={darkMode ? "app-container dark" : "app-container"}>
-      <Header handleMode={handleMode} darkMode={darkMode} />
+      <Header mobileSearch={mobileSearch} handleMode={handleMode} darkMode={darkMode} handleMobile={handleMobile} />
       <div className="inner-app">
         <div className="inner-header">
-          <FilterSearchComponent handleClean={handleClean} handleSearch={handleSearch} handleFilter={handleFilter} darkMode={darkMode} />
+          <FilterSearchComponent mobileSearch={mobileSearch} handleClean={handleClean} handleSearch={handleSearch} handleFilter={handleFilter} darkMode={darkMode} />
           <h1 style={darkMode ? { backgroundColor: "var(--dark-blue)", boxShadow: "1px 1px 0.3rem 1px var(--white)" } : {}}>
             Quadro de Medalhas <span style={darkMode ? { color: 'var(--dark-blue)' } : {}}>Top 50</span>
           </h1>
