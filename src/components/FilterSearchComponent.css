@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 200px;
+    top: 30vh;
     z-index: 2;
 }
 
@@ -62,21 +62,21 @@ select {
 
 @keyframes dropDown {
     from {
-        top: -200px;
+        top: -32vh;
     }
 
     to {
-        top: 200px;
+        top: 32vh;
     }
 }
 
 @keyframes dropUp {
     from {
-        top: 200px;
+        top: 32vh;
     }
 
     to {
-        top: -200px;
+        top: -32vh;
     }
 }
 

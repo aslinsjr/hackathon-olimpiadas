@@ -65,6 +65,7 @@ function App() {
     })
 
     setFilterArray(filterRegionArray)
+    window.scrollTo(0, 100)
   }
 
   function handleMobile() { // Função Menu de Busca Mobile
